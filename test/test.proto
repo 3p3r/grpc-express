@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package grpcexpress;
+
+service GrpcExpressService {
+  rpc UnaryCallTimeout(SampleRequestType) returns (SampleResponseType) {};
+  rpc UnaryCallError(SampleRequestType) returns (SampleResponseType) {};
+  rpc UnaryCallOne(SampleRequestType) returns (SampleResponseType) {};
+  rpc UnaryCallTwo(SampleRequestType) returns (SampleResponseType) {};
+  rpc ServerStreamCallOne(SampleRequestType) returns(stream SampleResponseType) {};
+  rpc ServerStreamCallTwo(SampleRequestType) returns(stream SampleResponseType) {};
+}
+
+message SampleRequestType {
+  string requestData = 1;
+}
+
+message SampleResponseType {
+  string responseData = 1;
+}
