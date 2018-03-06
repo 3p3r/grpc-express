@@ -1,6 +1,6 @@
 {
   "name": "grpc-express",
-  "version": "1.0.0",
+  "version": "v1.0.0-beta",
   "description": "gRPC express based web proxy",
   "main": "index.js",
   "scripts": {
