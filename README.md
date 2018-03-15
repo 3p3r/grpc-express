@@ -15,7 +15,7 @@ Take a look at alternative methods of doing this:
 * [gRPC-web](https://github.com/improbable-eng/grpc-web): requires TypeScript
 * [gRPC-web-proxy](https://github.com/improbable-eng/grpc-web/tree/master/go/grpcwebproxy): requires Go
 * [gRPC-gateway](https://github.com/grpc-ecosystem/grpc-gateway): requires `.proto` modification
-* [grpc-bus-websocket-proxy-server](https://github.com/gabrielgrant/grpc-bus-websocket-proxy-server): as of writing this document it lacks tests and seems abandoned
+* [grpc-bus-websocket-proxy-server](https://github.com/gabrielgrant/grpc-bus-websocket-proxy-server): as of writing this document it lacks tests
 
 On the other hand, Express middlewares are easy to use and the chance that your app already ships with Express is extremely high! Also it's NodeJS only and requires no additional setups in client or server side.
 
