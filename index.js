@@ -40,7 +40,7 @@ class Middleware {
             )
             .map(route => grpcClient[route].path)
         )
-      ].forEach(route => {
+      ].filter(r => r).forEach(route => {
         const keys = routeToPathKeys(route);
         this._unaryCalls.set(keys.lower, keys.name);
         this._unaryCalls.set(keys.upper, keys.name);
@@ -60,7 +60,7 @@ class Middleware {
             )
             .map(route => grpcClient[route].path)
         )
-      ].forEach(route => {
+      ].filter(r => r).forEach(route => {
         const keys = routeToPathKeys(route);
         this._serverStreamCalls.set(keys.lower, keys.name);
         this._serverStreamCalls.set(keys.upper, keys.name);
