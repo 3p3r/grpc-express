@@ -40,6 +40,6 @@ var app = express();
 app.use(grpcExpress(grpcClient));
 ```
 
-Done! The middleware automatically registers REST endpoints and proxies requests to your gRPC server and back. If your service is in `packageName`, and its name is `serviceName`, you can access its methods over the following REST endpoints: `http://expressServer/packageName/serviceName/[METHOD NAME]`.
+Done! The middleware automatically registers REST endpoints and proxies requests to your gRPC server and back. If your service is in `packageName`, and its name is `serviceName`, you can access its methods over the following REST endpoints: `http://expressServer/packageName.serviceName/[METHOD NAME]`.
 
 Arguments are passed as JSON objects in. Unary calls return JSON objects back and streaming calls return a JSON array of objects back. For a more detailed and in-depth example of calling REST endpoints look at [tests](test/middleware.test.js).
